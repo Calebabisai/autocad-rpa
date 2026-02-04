@@ -40,7 +40,7 @@ export class AutomationService {
       const dest = AUTOCAD_MAPPINGS.windows.pv3;
 
       // MARGEN DE ERROR: Creamos un cuadro de 40x40 unidades alrededor del centro
-      const margen = 40;
+      const margen = 200;
       const x1 = source.x - margen;
       const y1 = source.y - margen;
       const x2 = source.x + margen;
