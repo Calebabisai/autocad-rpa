@@ -39,8 +39,8 @@ export class AutomationService {
       const source = AUTOCAD_MAPPINGS.templates.tesla_backup_riser;
       const dest = AUTOCAD_MAPPINGS.windows.pv3;
 
-      // MARGEN DE ERROR: Creamos un cuadro de 20x20 unidades alrededor del centro
-      const margen = 20;
+      // MARGEN DE ERROR: Creamos un cuadro de 40x40 unidades alrededor del centro
+      const margen = 40;
       const x1 = source.x - margen;
       const y1 = source.y - margen;
       const x2 = source.x + margen;

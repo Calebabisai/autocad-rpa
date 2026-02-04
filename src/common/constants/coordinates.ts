@@ -7,6 +7,6 @@ export const AUTOCAD_MAPPINGS = {
     },
   },
   windows: {
-    pv3: { x: 1022.3782, y: 646.8017 },
+    pv3: { x: 833.4116, y: 607.915 },
   },
 };
