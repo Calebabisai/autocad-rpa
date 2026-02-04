@@ -29,6 +29,7 @@ export class AutomationService {
     return this.generateScrContent(proyecto);
   }
 
+  /* eslint-disable */
   private generateScrContent(data: any): string {
     let scr = `_REGEN\n`;
     scr += `; --- Procesando Proyecto: ${data.cliente} ---\n`;
@@ -39,13 +40,12 @@ export class AutomationService {
       const source = AUTOCAD_MAPPINGS.templates.tesla_backup_riser;
       const dest = AUTOCAD_MAPPINGS.windows.pv3;
 
-      // Calculamos el desplazamiento (Delta)
+      // Calculamos el desplazamiento (Delta) si quieres usar @
       const dx = dest.x - source.x;
       const dy = dest.y - source.y;
 
       scr += `; Moviendo diagrama de Tesla a PV3...\n`;
-      // Comando MOVE usando coordenadas relativas (@) para máxima precisión
-      scr += `_MOVE ${source.x},${source.y}  @${dx},${dy}\n`;
+      scr += `_MOVE ${source.x},${source.y}\n\n${source.x},${source.y}\n${dest.x},${dest.y}\n`;
     } else {
       scr += `; Condicion Tesla PW3 o R59=YES no cumplida. No se movio el diagrama.\n`;
     }
