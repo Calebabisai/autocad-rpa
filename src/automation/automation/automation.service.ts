@@ -21,9 +21,9 @@ export class AutomationService {
 
     // Preparamos el objeto de datos para la generación del script
     const proyecto = {
+      cliente: getVal('C2'),
       esTeslaPW3: tipoConexion.toUpperCase() === 'TESLA POWERWALL 3',
       debeMoverse: moveDiagram.toUpperCase() === 'YES',
-      cliente: getVal('A5'), // Supongamos que el cliente sigue en A5
     };
 
     return this.generateScrContent(proyecto);
